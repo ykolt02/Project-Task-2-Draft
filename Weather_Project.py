@@ -3,7 +3,6 @@ import requests
 
 # function to request for data
 def weather_data(query):
-   # Enter your API key here
    api_key = "a0a0e15a1a637278b01fef743314c833"
    # base_url variable to store url
    base_url = "http://api.openweathermap.org/data/2.5/weather?"
@@ -21,10 +20,8 @@ def display_results(weathers,city):
 
 # main function
 def main():
-   # Give city name
    city=input('Enter the city name or zip code:')
    print()
-   # try-except block
    try:
       query='q='+city;
       w_data=weather_data(query);
